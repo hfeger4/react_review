@@ -1,4 +1,4 @@
-import { FETCH_POSTS, FETCH_POST } from '../actions';
+import { FETCH_POSTS, FETCH_POST, DELETE_POST } from '../actions';
 import _ from 'lodash';
 
 export default function PostsReducer(state = {}, action){
@@ -12,6 +12,9 @@ export default function PostsReducer(state = {}, action){
     // return newState;
     
     return {...state, [action.payload.data.id]: action.payload.data};
+  case DELETE_POST:
+    return _.omit(state, action.payload); //can do this because its an object
+    //return _.reject(state, post => post.id === action.payload) if it was an array
   default:
     return state;
   }
