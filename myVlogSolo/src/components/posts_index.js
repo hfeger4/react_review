@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 class PostsIndex extends Component{
+  componentDidMount(){
+    this.props.fetchPosts();
+  }
   render(){
     return(
       <div>
@@ -9,6 +12,10 @@ class PostsIndex extends Component{
       </div>
     );
   }
+}
+
+function mapStateToProps(state){
+  return {posts: state.posts};
 }
 
 export default PostsIndex;
