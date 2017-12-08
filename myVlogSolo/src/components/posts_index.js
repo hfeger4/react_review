@@ -11,16 +11,16 @@ class PostsIndex extends Component{
     return _.map(this.props.posts, post => {
       return (
         <li>
-          {post.id}
+          {post.title}
         </li>
       );
     });
   }
   render(){
     return(
-      <div>
+      <ul>
         {this.renderPosts()}
-      </div>
+      </ul>
     );
   }
 }
