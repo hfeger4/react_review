@@ -18,9 +18,12 @@ class PostsIndex extends Component{
   }
   render(){
     return(
-      <ul>
-        {this.renderPosts()}
-      </ul>
+      <div>
+        <h3>Posts</h3>
+        <ul>
+          {this.renderPosts()}
+        </ul>
+      </div>
     );
   }
 }
