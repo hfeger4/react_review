@@ -12,6 +12,8 @@ class PostsIndex extends Component{
       return (
         <li key={post.id}>
           {post.title}: {post.content}
+
+          {post.categories}
         </li>
       );
     });
