@@ -11,7 +11,7 @@ class PostsIndex extends Component{
     return _.map(this.props.posts, post =>{
       return (
         <li key={post.id}>
-          {post.title}
+          {post.title}: {post.content}
         </li>
       );
     });
@@ -21,9 +21,9 @@ class PostsIndex extends Component{
     return(
       <div>
         <h3>Posts</h3>
-        <ul>
+        <ol>
         {this.renderPosts()}
-        </ul>
+      </ol>
       </div>
     );
   }
