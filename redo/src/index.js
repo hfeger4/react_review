@@ -17,6 +17,7 @@ ReactDOM.render(
         Header
         <Switch>
           <Route path="/" component={PostsIndex} />
+
         </Switch>
       </div>
     </BrowserRouter>
