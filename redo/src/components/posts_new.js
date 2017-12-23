@@ -4,10 +4,10 @@ class PostsNew extends Component{
   render(){
     return(
       <div>
-      Hello
+      PostsNew Component
       </div>
     );
   }
 }
 
-export default (null)(PostsNew);
+export default (PostsNew);
